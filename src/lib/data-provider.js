@@ -22,5 +22,6 @@ export default () => {
     Router.before("movies", async ({page})=>{
         // first wait for getMovies to resolve with data
         // call something like: page.movies = data; (page === the actual Lightning component instance)
-    }, 500 /* expires */);
+        page.movies = await getMovies();
+    }, 1000 /* expires */);
 }

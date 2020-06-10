@@ -13,7 +13,7 @@ export const init = (stageInstance) =>{
  * and return the data
  */
 export const getMovies = async()=> {
-
+    return await get(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`);
 };
 
 const get = (url)=> {

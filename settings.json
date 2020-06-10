@@ -18,6 +18,8 @@
     "lazyCreate": true,
     "lazyDestroy": true,
     "reuseInstance": true,
-    "logRoute": false
+    "logRoute": false,
+    "imageServerUrl": "//cdn.metrological.com/image",
+    "proxyUrl": "//cdn.metrological.com/proxy"
   }
 }

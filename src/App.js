@@ -1,7 +1,7 @@
 import { Lightning, Utils, Router } from 'wpe-lightning-sdk';
 import provider from "./lib/data-provider";
 import routes from "./lib/routes";
-import {init as initApi} from "./lib/Api"
+import {init as initApi} from "./lib/api"
 import {Splash} from "./pages";
 
 export default class App extends Lightning.Component {
@@ -21,15 +21,13 @@ export default class App extends Lightning.Component {
         Router.startRouter({
             appInstance: this, provider, routes
         });
+        Router.navigate("splash")
     }
 
     static _template() {
         return {
             Pages: {
-                forceZIndexContext: true, w: 1000
-            },
-            Splash:{
-               type: Splash
+                forceZIndexContext: true, w: 1000,
             },
             Widgets: {
                 Menu:{
@@ -52,6 +50,7 @@ export default class App extends Lightning.Component {
         // call
     }
 
+    /*
     _getFocused(){
         return this.tag("Splash")
     }
@@ -59,6 +58,7 @@ export default class App extends Lightning.Component {
     _handleLeft(){
         this.setIndex(this.index - 1);
     }
+    */
 
      static _states() {
         return [
